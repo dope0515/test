@@ -22,32 +22,16 @@
 <p id="result_04"></p>
 <p id="result_05"></p>
 <p id="result_06"></p>
+<p id="result_07"></p>
 
 <script>
 
-    // 현재 윈도우 창의 스크롤값을 제외한 넓이 및 높이
+    var windowHref = window.location.href;//현재 문서의 위치를 나타냄
+    var windowHost = window.location.hostname;//서버의 이름을 나타냄
 
-    var windowX = window.innerWidth;
-    var windowY = window.innerHeight;
+    document.getElementById("result_01").innerHTML = "Window location is : " + windowHref;
+    document.getElementById("result_02").innerHTML = "Window Host Name is : " + windowHost;
 
-    // 현재 사용자의 기기의 스크롤값을 제외한 넓이 및 높이
-    var windowXx = screen.width;
-    var windowYy = screen.height;
-
-    // 윈도우는 작업표시공간을 제외한 넓이 및 공간, mac os는 dock을 포함하기도 한다.
-    var windowXxx = screen.availWidth;
-    var windowYyy = screen.availHeight;
-
-    // 윈도우 explre8 버전 이하에서 지원 할 때 이 값을 사용한다.
-    //var windowX = document.body.clientWidth;
-    //var windowY = document.body.clientHeight;
-
-    document.getElementById("result_01").innerHTML = "Window Width is : " + windowX;
-    document.getElementById("result_02").innerHTML = "Window Height is : " + windowY;
-    document.getElementById("result_03").innerHTML = "Screen Width is : " + windowXx;
-    document.getElementById("result_04").innerHTML = "Screen Height is : " + windowYy;
-    document.getElementById("result_05").innerHTML = "Screen AvailWidth is : " + windowXxx;
-    document.getElementById("result_06").innerHTML = "Screen AvailHeight is : " + windowYyy;
     
 
 </script>
