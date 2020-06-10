@@ -28,9 +28,15 @@
 
     var windowHref = window.location.href;//현재 문서의 위치를 나타냄
     var windowHost = window.location.hostname;//서버의 이름을 나타냄
+    var windowPath = window.location.pathname;//서버의 이름을 나타냄
+    var windowProtocol = window.location.protocol;//서버의 이름을 나타냄
+    var windowPort = window.location.port;//서버의 이름을 나타냄
 
     document.getElementById("result_01").innerHTML = "Window location is : " + windowHref;
     document.getElementById("result_02").innerHTML = "Window Host Name is : " + windowHost;
+    document.getElementById("result_03").innerHTML = "Window Path Name is : " + windowPath;
+    document.getElementById("result_04").innerHTML = "Window Protocol is : " + windowProtocol;
+    document.getElementById("result_05").innerHTML = "Window Port is : " + windowPort;
 
     
 
