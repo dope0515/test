@@ -29,13 +29,41 @@
 <p id="result_11"></p>
 <p id="result_12"></p>
 
-
+<!--쿠키는 브라우저가 열렸을때 기록되고 닫았을때 없어진다. expires는 쿠키의 유효기간을 설정한다. path는 쿠키를 저장하는 위치-->
+<!--쿠키를 삭제하는 방법은 expires값을 과거시간으로 지정하면  delete 된다.-->
     <script>
         var x = document.cookie;
-
+        /*
+        document.cookie = "username = 홍길동; expires = Fri,29 june 2020 00:00:00 UTC; path=/naver/;"; //쿠키의 유효기간을 설정할 경우
+        document.cookie = "username = ; expires = Mon,1 june 2019 00:00:00 UTC; path=/naver/;";//쿠키를 삭제할 경우*/
         document.cookie = "username = 홍길동";
         document.cookie = "gender = male";
-        document.getElementById("result_01").innerHTML = x;
+        document.cookie = "age = 20";
+        document.getElementById("result_01").innerHTML = getCookie(username);
+
+
+        //지정한 쿠키값만 불러오고 싶을 경우 사용하는 함수
+        function getCookie(cookiename) {
+            var name = cookiename + "=";
+            var decodedCookie = decodeURIComponent(document.cookie); // 쿠키를 분리한다.
+            var ca = decodedCookie.split(";"); // 각각의 쿠키를 ; 로 분리한다.
+
+            for (i=0;i < ca.length;i++ ) 
+            { var c = ca[i];
+                while(c.charAt(0) == "") 
+                { c=c.substring(1);}
+                    if (c.indexOf(name) == 0) 
+                    {return c.substring(name.length, c.length)}
+                }
+                return "";
+            }
+
+
+
+
+
+        
+
 
     </script>
 
