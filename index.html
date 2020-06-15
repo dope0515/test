@@ -1,10 +1,10 @@
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>JS bom</title>
+        <title>JS cookies</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Netflix">
-        <meta name="keywords" content="Netflix, streaming, video, movie">
+        <meta name="description" content="javascript">
+        <meta name="keywords" content="javascript, js, navigation, study">
         <meta name="author" content="park_seung_joo">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -23,24 +23,20 @@
 <p id="result_05"></p>
 <p id="result_06"></p>
 <p id="result_07"></p>
+<p id="result_08"></p>
+<p id="result_09"></p>
+<p id="result_10"></p>
+<p id="result_11"></p>
+<p id="result_12"></p>
 
-<script>
 
-    var windowHref = window.location.href;//현재 문서의 위치를 나타냄
-    var windowHost = window.location.hostname;//서버의 이름을 나타냄
-    var windowPath = window.location.pathname;//서버의 이름을 나타냄
-    var windowProtocol = window.location.protocol;//서버의 이름을 나타냄
-    var windowPort = window.location.port;//서버의 이름을 나타냄
+    <script>
+        var x = document.cookie;
 
-    document.getElementById("result_01").innerHTML = "Window location is : " + windowHref;
-    document.getElementById("result_02").innerHTML = "Window Host Name is : " + windowHost;
-    document.getElementById("result_03").innerHTML = "Window Path Name is : " + windowPath;
-    document.getElementById("result_04").innerHTML = "Window Protocol is : " + windowProtocol;
-    document.getElementById("result_05").innerHTML = "Window Port is : " + windowPort;
+        document.cookie = "username = 홍길동";
+        document.getElementById("result_01").innerHTML = x;
 
-    
-
-</script>
+    </script>
 
 </body>
 </html>
