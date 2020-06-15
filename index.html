@@ -39,7 +39,7 @@
         document.cookie = "username = 홍길동";
         document.cookie = "gender = male";
         document.cookie = "age = 20";
-        document.getElementById("result_01").innerHTML = getCookie("age");
+        document.getElementById("result_01").innerHTML = getCookie("gender");
 
 
         //지정한 쿠키값만 불러오고 싶을 경우 사용하는 함수
@@ -48,7 +48,7 @@
             var decodedCookie = decodeURIComponent(document.cookie); // 쿠키를 분리한다.
             var ca = decodedCookie.split(";"); // 각각의 쿠키를 ; 로 분리한다.
 
-            for (i=0;i < ca.length;i++ ) 
+            for (i=0; i < ca.length; i++ ) 
             { var c = ca[i];
                 while(c.charAt(0) == "") 
                 { c=c.substring(1);}
