@@ -49,20 +49,13 @@
             var ca = decodedCookie.split(";"); // 각각의 쿠키를 ; 로 분리한다.
             for (i=0; i<ca.length; i++ ) 
             { var c = ca[i];
-                while(c.charAt(0) == "") 
+                while(c.charAt(0) == " ") 
                 { c=c.substring(1);}
                     if (c.indexOf(name) == 0) 
                     {return c.substring(name.length, c.length)}
                 }
                 return "";
             }
-
-
-
-
-
-        
-
 
     </script>
 
