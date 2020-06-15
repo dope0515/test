@@ -47,7 +47,7 @@
             var name = cookiename + "=";
             var decodedCookie = decodeURIComponent(document.cookie); // 쿠키를 분리한다.
             var ca = decodedCookie.split(";"); // 각각의 쿠키를 ; 로 분리한다.
-            for (i=0; i < ca.length; i++ ) 
+            for (i=0; i<ca.length; i++ ) 
             { var c = ca[i];
                 while(c.charAt(0) == "") 
                 { c=c.substring(1);}
